@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <br>
+    <br>
+    <br>
+    <h1 style="text-align:center">Sprawdź umowę.</h1>
+    <br>
+    <p>1. <a href="{{ url_for('sprawdz_link') }}" class="navbar-item">Sprawdz link</a></p>
+    <p>2. <a href="{{ url_for('sprawdz_plik') }}" class="navbar-item">Sprawdz plik</a></p>
+    <p>3. <a href="{{ url_for('sprawdz_tekst') }}" class="navbar-item">Sprawdz tekst</a></p>
+    <br>
+
+{% endblock %}

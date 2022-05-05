@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <br>
+    <h1 style="text-align:center">Zdrowa umowa</h1>
+    <br>
+    <br>
+
+    <p style="text-align:center">Czasem słowności trzeba pomóc. Zrób to z klasą.</p>
+
+
+    <p style="text-align:center">O wspieraniu zdrowych umów i umawianiu się <a href="{{ url_for('umowmy_sie') }}" class="navbar-item"> słów kilka.</a></p>
+    <div style="text-align:center" class="form-wrapper">
+
+        <form  action="" method="post">
+        
+            {{ form.csrf_token() }}
+   
+        	<br>
+        	<br>
+        	<br>
+        	<br>
+            <p><b>Tytuł:</b></p>
+            {{ form.title }}
+            
+            <p><b>Treść:</b></p>
+            {{ form.agree_to(rows=10, cols=80) }}
+
+            <p><b>Co jeżeli dotrzymamy?</b></p>
+            {{ form.action_if_fulfilled }}
+
+            <p><b>Sami zdefiniujcie :)</b></p>
+            {{ form.other_if_not_fulfilled }}
+
+
+            <p><b>Co jeżeli nie dotrzymamy?</b></p>
+            {{ form.action_if_not_fulfilled }}
+
+            <p><b>Sami zdefiniujcie (tylko z głową).</b></p>
+            {{ form.other_if_fulfileled }}
+
+            <p><b>Kto 1:</b></p>
+            {{ form.who }}
+
+            <p><b>Kto 2:</b></p>
+            {{ form.who2 }}
+
+            <p><b>Dodaj świadka:</b></p>
+            {{ form.witness }}
+            
+            <p><b>Prywatne czy publiczne?</b></p>
+            {{ form.public }}
+
+        	<br>
+        	<br>
+        	<br>
+        	<br>
+
+            {{ form.button }}
+
+        </form>
+    </div>
+
+{% endblock %}

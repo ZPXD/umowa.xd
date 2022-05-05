@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <br>
+    <h1 style="text-align:center">Jak kogoś kochasz, to mu powiedz.</h1>
+
+    <br>
+    <br>
+    <p style="text-align:center">Umów się na randkę</p>
+
+    <div class="form-wrapper">
+        <form style="text-align:center" action="" method="post">
+        
+            {{ form.csrf_token() }}
+   
+            <br>
+            <br>
+            
+            <p><b>Gdzie?</b></p>
+            {{ form.where }}
+            
+            <p><b>Kiedy?</b></p>
+            {{ form.when }}
+            
+            <p><b>Styl odpowiedzi</b></p>
+            {{ form.answerstyle }}
+
+            <p><b>Plener / w domu</b></p>
+            {{ form.home_or_nature }}
+
+            <p><b>Heya</b></p>
+            {{ form.heya }}
+
+            <br>
+            <br>
+
+            {{ form.button }}
+
+        </form>
+    </div>
+    
+{% endblock %}

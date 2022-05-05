@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+    <br>
+   	<p>Dołącz.</p>
+
+
+    <div class="form-wrapper">
+
+        <form  style="text-align:center" action="" method="post">
+        
+            {{ form.csrf_token() }}
+
+            <p><b>What is your name?</b></p>
+            {{ form.name }}
+            </p>
+
+            <p><b>Password (DNRY)</b></p>
+            {{ form.password }}
+
+            <p><b>Re:</b></p>
+            {{ form.confirm_password }}
+
+            <p><b>Email:</b></p>
+            {{ form.email }}
+
+            <p><b>Email:</b></p>
+            {{ form.button }}
+
+        </form>
+    </div>
+{% endblock %}
